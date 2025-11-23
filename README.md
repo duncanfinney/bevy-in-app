@@ -26,6 +26,7 @@ This fork includes the following modifications:
 | ------------------------------------------ | -------------------------------------------------- |
 
 ## IOS Power Profiles 
+![60hz Fixed](assets/github/profiles/60hz_fixed.png)
 ![120hz Fixed](assets/github/profiles/120hz_fixed.png)
 
 
