@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
        
         self.displayLink.add(to: .current, forMode: .default)
-        self.displayLink.preferredFrameRateRange = CAFrameRateRange(minimum: 120, maximum: 120, preferred: 120);
+        self.displayLink.preferredFrameRateRange = CAFrameRateRange(minimum: 60, maximum: 60, preferred: 60);
         self.displayLink.isPaused = true
     }
     

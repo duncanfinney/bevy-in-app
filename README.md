@@ -1,10 +1,24 @@
 # Bevy in App
 
+> **Note:** This is a fork of the original [bevy-in-app](https://github.com/bevyengine/bevy-in-app) repository with modifications for a simplified bouncing ball demo and performance optimizations.
+
 Integrate the [Bevy engine](https://github.com/bevyengine/bevy) into existing iOS | Android apps.
 
 If you want to add a mini-game to an existing app, or implement some dynamic UI components, charts ..., or just want to take advantage of the **Motion Sensors** on your phone for some cool gameplay, you can't use `WinitPlugin`. Because `winit` will take over the entire app initialization process and windowing, but we need to create `bevy::App` in an existing app instance, and we may also want `bevy::App` to run in an `iOS UIView` or `Android SurfaceView` of any size.
 
-This repository implements such a scenario and uses the phone's motion sensor to play breakout mini-games.
+This fork implements a simple 3D bouncing sphere demo optimized for mobile devices.
+
+## Changes from Original
+
+This fork includes the following modifications:
+
+- **120Hz / ProMotion Support**: Added support for requesting 120Hz refresh rates on iOS devices with ProMotion displays
+- **Simplified Demo**: Replaced the breakout game with a basic 3D sphere bounce animation
+- **Removed Accelerometer Code**: Removed all CoreMotion/accelerometer boilerplate code that was used for the original breakout game
+- **Locked Dependency Versions**: Pinned dependency versions in `Cargo.toml` for reproducible builds
+- **Optimized Bevy Features**: Slimmed down Bevy feature flags for better battery life by removing:
+  - `multi_thread` (single-threaded execution)
+  - `bevy_text` (text rendering disabled)
 
 ## Screenshots
 
