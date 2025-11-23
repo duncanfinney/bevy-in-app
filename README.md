@@ -25,7 +25,7 @@ This fork includes the following modifications:
 <img src="assets/github/app_screenshots/bouncing_ball.gif" alt="Bevy in iOS App" height="400" />
 
 
-## IOS Power Profiles 
+## iOS Power Profiles 
 ![60hz Fixed](assets/github/profiles/60hz_fixed.png)
 ![120hz Fixed](assets/github/profiles/120hz_fixed.png)
 
