@@ -22,8 +22,7 @@ This fork includes the following modifications:
 
 ## Screenshots
 
-| ![Bevy in iOS App](assets/github/app_screenshots/bouncing_ball.gif) |
-| ------------------------------------------------------------------- |
+<img src="assets/github/app_screenshots/bouncing_ball.gif" alt="Bevy in iOS App" height="400" />
 
 
 ## IOS Power Profiles 
