@@ -22,7 +22,7 @@ This fork includes the following modifications:
 
 ## Screenshots
 
-![Bevy in iOS App](assets/github/app_screenshots/bouncing_ball_1080_webp.webp) 
+![Bevy in iOS App](assets/github/app_screenshots/bouncing_ball.gif) 
 
 
 ## IOS Power Profiles 
