@@ -1,4 +1,4 @@
-//! A simple Bevy demo with a floor, sphere, and light.
+//! A simple Bevy demo with a floor, sphere, and light. Sphere is animated up and down
 
 use bevy::prelude::*;
 
