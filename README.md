@@ -1,27 +1,47 @@
 # Bevy in App
 
+> **Note:** This is a fork of the original [bevy-in-app](https://github.com/bevyengine/bevy-in-app) repository with modifications for a simplified bouncing ball demo and performance optimizations.
+
 Integrate the [Bevy engine](https://github.com/bevyengine/bevy) into existing iOS | Android apps.
 
 If you want to add a mini-game to an existing app, or implement some dynamic UI components, charts ..., or just want to take advantage of the **Motion Sensors** on your phone for some cool gameplay, you can't use `WinitPlugin`. Because `winit` will take over the entire app initialization process and windowing, but we need to create `bevy::App` in an existing app instance, and we may also want `bevy::App` to run in an `iOS UIView` or `Android SurfaceView` of any size.
 
-This repository implements such a scenario and uses the phone's motion sensor to play breakout mini-games.
+This fork implements a simple 3D bouncing sphere demo optimized for mobile devices.
 
-## Screenshot
+## Changes from Original
 
-| ![Bevy in iOS App](assets/bevy_in_ios.png) | ![Bevy in Android App](assets/bevy_in_android.png) |
-| ------------------------------------------ | -------------------------------------------------- |
+This fork includes the following modifications:
 
-## **iOS**
+- **120Hz / ProMotion Support**: Added support for requesting 120Hz refresh rates on iOS devices with ProMotion displays
+- **Simplified Demo**: Replaced the breakout game with a basic 3D sphere bounce animation
+- **Removed Accelerometer Code**: Removed all CoreMotion/accelerometer boilerplate code that was used for the original breakout game
+- **Locked Dependency Versions**: Pinned dependency versions in `Cargo.toml` for reproducible builds
+- **Optimized Bevy Features**: Slimmed down Bevy feature flags for better battery life by removing:
+  - `multi_thread` (single-threaded execution)
+  - `bevy_text` (text rendering disabled)
 
+## Screenshots
+
+<img src="assets/github/app_screenshots/bouncing_ball.gif" alt="Bevy in iOS App" height="400" />
+
+
+## iOS Power Profiles 
+![60hz Fixed](assets/github/profiles/60hz_fixed.png)
+![120hz Fixed](assets/github/profiles/120hz_fixed.png)
+
+
+
+## Build iOS
 ```sh
 # Add iOS target
 rustup target add aarch64-apple-ios
 
 # Build for iOS target
 sh ./ios_build.sh --release
-```
 
-Then, Open `iOS/bevy_in_iOS.xcodeproj` with Xcode，connect an iOS device and run.
+# Open the xCode project
+open ./iOS/bevy_in_iOS.xcodeproj
+```
 
 ## **Android**
 
