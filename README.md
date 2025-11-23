@@ -22,8 +22,8 @@ This fork includes the following modifications:
 
 ## Screenshots
 
-| ![Bevy in iOS App](assets/bevy_in_ios.png) | ![Bevy in Android App](assets/bevy_in_android.png) |
-| ------------------------------------------ | -------------------------------------------------- |
+| ![Bevy in iOS App](assets/github/app_screenshots/bouncing_ball_1080_webp.webp) 
+| ------------------------------------------ 
 
 ## IOS Power Profiles 
 ![60hz Fixed](assets/github/profiles/60hz_fixed.png)
